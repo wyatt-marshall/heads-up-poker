@@ -1,0 +1,4 @@
+To get the game going, first run a make build, and then running make play should 
+get the game going. Note: certain format errors within make play are currently fatal,
+this is not an issue with the way you have installed the code, but rather something we are
+looking to clean up in the upcoming sprint.

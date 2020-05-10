@@ -1,0 +1,44 @@
+### Starting build.
+# Target: main.mli.depends, tags: { package(oUnit), extension:mli, file:main.mli, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package oUnit -modules main.mli > main.mli.depends # cached
+# Target: main.cmi, tags: { package(oUnit), byte, compile, extension:mli, file:main.mli, interf, ocaml, quiet }
+ocamlfind ocamlc -c -package oUnit -o main.cmi main.mli # cached
+# Target: main.ml.depends, tags: { package(oUnit), extension:ml, file:main.ml, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package oUnit -modules main.ml > main.ml.depends
+# Target: command.mli.depends, tags: { package(oUnit), extension:mli, file:command.mli, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package oUnit -modules command.mli > command.mli.depends # cached
+# Target: command.cmi, tags: { package(oUnit), byte, compile, extension:mli, file:command.mli, interf, ocaml, quiet }
+ocamlfind ocamlc -c -package oUnit -o command.cmi command.mli # cached
+# Target: poker.mli.depends, tags: { package(oUnit), extension:mli, file:poker.mli, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package oUnit -modules poker.mli > poker.mli.depends # cached
+# Target: poker.cmi, tags: { package(oUnit), byte, compile, extension:mli, file:poker.mli, interf, ocaml, quiet }
+ocamlfind ocamlc -c -package oUnit -o poker.cmi poker.mli # cached
+# Target: state.mli.depends, tags: { package(oUnit), extension:mli, file:state.mli, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package oUnit -modules state.mli > state.mli.depends # cached
+# Target: state.cmi, tags: { package(oUnit), byte, compile, extension:mli, file:state.mli, interf, ocaml, quiet }
+ocamlfind ocamlc -c -package oUnit -o state.cmi state.mli # cached
+# Target: strategies.mli.depends, tags: { package(oUnit), extension:mli, file:strategies.mli, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package oUnit -modules strategies.mli > strategies.mli.depends # cached
+# Target: strategies.cmi, tags: { package(oUnit), byte, compile, extension:mli, file:strategies.mli, interf, ocaml, quiet }
+ocamlfind ocamlc -c -package oUnit -o strategies.cmi strategies.mli # cached
+# Target: main.cmo, tags: { package(oUnit), byte, compile, extension:cmo, extension:ml, file:main.cmo, file:main.ml, implem, ocaml, quiet }
+ocamlfind ocamlc -c -package oUnit -o main.cmo main.ml
+# Target: command.ml.depends, tags: { package(oUnit), extension:ml, file:command.ml, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package oUnit -modules command.ml > command.ml.depends # cached
+# Target: command.cmo, tags: { package(oUnit), byte, compile, extension:cmo, extension:ml, file:command.cmo, file:command.ml, implem, ocaml, quiet }
+ocamlfind ocamlc -c -package oUnit -o command.cmo command.ml # cached
+# Target: poker.ml.depends, tags: { package(oUnit), extension:ml, file:poker.ml, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package oUnit -modules poker.ml > poker.ml.depends # cached
+# Target: poker.cmo, tags: { package(oUnit), byte, compile, extension:cmo, extension:ml, file:poker.cmo, file:poker.ml, implem, ocaml, quiet }
+ocamlfind ocamlc -c -package oUnit -o poker.cmo poker.ml # cached
+# Target: state.ml.depends, tags: { package(oUnit), extension:ml, file:state.ml, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package oUnit -modules state.ml > state.ml.depends # cached
+# Target: state.cmo, tags: { package(oUnit), byte, compile, extension:cmo, extension:ml, file:state.cmo, file:state.ml, implem, ocaml, quiet }
+ocamlfind ocamlc -c -package oUnit -o state.cmo state.ml # cached
+# Target: strategies.ml.depends, tags: { package(oUnit), extension:ml, file:strategies.ml, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package oUnit -modules strategies.ml > strategies.ml.depends # cached
+# Target: strategies.cmo, tags: { package(oUnit), byte, compile, extension:cmo, extension:ml, file:strategies.cmo, file:strategies.ml, implem, ocaml, quiet }
+ocamlfind ocamlc -c -package oUnit -o strategies.cmo strategies.ml # cached
+# Target: main.byte, tags: { package(oUnit), byte, dont_link_with, extension:byte, file:main.byte, link, ocaml, program, quiet }
+ocamlfind ocamlc -linkpkg -package oUnit command.cmo poker.cmo state.cmo strategies.cmo main.cmo -o main.byte
+# Compilation successful.
